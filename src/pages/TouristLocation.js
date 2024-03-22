@@ -1,4 +1,5 @@
-import { View } from "react-native";
+import { View, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 // Importando os componentes
 import Name from "../components/NameComponent";
 import Adress from "../components/AddressComponent";
@@ -8,6 +9,7 @@ import Imagem from "../components/ImageComponent";
 import styles from "../styles/StyleSheet";
 
 export default function Tourist() {
+  const navigation = useNavigation();
   return (
     // View principal
     <View style={styles.container}>
@@ -27,6 +29,10 @@ export default function Tourist() {
       <Adress
         styleEnd={styles.end}
         endereco="Estr. do Cristo - Centro, Poços de Caldas - MG"
+      />
+      <Button
+        title="Information"
+        onPress={() => navigation.navigate("Information")}
       />
     </View>
   );
