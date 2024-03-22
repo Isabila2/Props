@@ -34,6 +34,11 @@ export default function Tourist() {
         title="Information"
         onPress={() => navigation.navigate("Information")}
       />
+
+      <Button
+        title="Contador"
+        onPress={() => navigation.navigate("Contador")}
+      />
     </View>
   );
 }
